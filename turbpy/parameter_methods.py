@@ -15,7 +15,7 @@ def yaml_dict(yaml_path):
         raise IOError('Could not find yml file at ' + yaml_path)
 
     with open(yaml_path, 'r') as ymlfile:
-        param_dict = yaml.load(ymlfile)
+        param_dict = yaml.full_load(ymlfile)
     return param_dict
 
 
